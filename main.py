@@ -1,7 +1,29 @@
-first_variable = 1
+class Warior():
+    def __init__(self, name, power, endurance, hair_color):
+        self.name = name
+        self.power = power
+        self.endurance = endurance
+        self.hair_color = hair_color
 
-second_variable = 2
+    def sleep(self):
+        print(f"{self.name} лег спать")
+        self.endurance += 2
 
+    def eat(self):
+        print(f"{self.name} сел кушать")
+        self.power += 1
 
-num = (1, 2, 3) # Решение конфликта
+    def hit(self):
+        print(f"{self.name} бьет кого-то")
+        self.endurance -= 6
 
+    def walk(self):
+        print(f"{self.name} гуляет")
+
+    def info(self):
+        print(f"имя воина - {self.name}")
+        print(f"цвет волос воина - {self.hair_color}")
+        print(f"сила воина - {self.power}")
+        print(f"выносливость воина - {self.endurance}")
+
+        
