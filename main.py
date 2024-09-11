@@ -26,4 +26,8 @@ class Warior():
         print(f"сила воина - {self.power}")
         print(f"выносливость воина - {self.endurance}")
 
-        
+war1 = Warior("Степан", 76, 54, "шатен")
+war2 = Warior("Андрей", 53, 96, "блондин")
+print(war1.endurance)
+war1.sleep()
+print(war1.endurance)
