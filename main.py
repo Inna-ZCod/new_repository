@@ -1,33 +1,22 @@
-class Warior():
-    def __init__(self, name, power, endurance, hair_color):
+# Создайте класс Author и класс Book. Класс Book должен использовать композицию для включения автора в качестве объекта.
+
+class Author():
+    def __init__(self, name, nationality):
         self.name = name
-        self.power = power
-        self.endurance = endurance
-        self.hair_color = hair_color
+        self.nationality = nationality
 
-    def sleep(self):
-        print(f"{self.name} лег спать")
-        self.endurance += 2
+class Book():
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
 
-    def eat(self):
-        print(f"{self.name} сел кушать")
-        self.power += 1
+    def get_info_book(self):
+        print(f"{self.title} - {self.author.name}")
 
-    def hit(self):
-        print(f"{self.name} бьет кого-то")
-        self.endurance -= 6
 
-    def walk(self):
-        print(f"{self.name} гуляет")
+author = Author("Лев Толстой", "русский")
+book = Book("Война и мир", author)
 
-    def info(self):
-        print(f"имя воина - {self.name}")
-        print(f"цвет волос воина - {self.hair_color}")
-        print(f"сила воина - {self.power}")
-        print(f"выносливость воина - {self.endurance}")
+book.get_info_book()
 
-war1 = Warior("Степан", 76, 54, "шатен")
-war2 = Warior("Андрей", 53, 96, "блондин")
-print(war1.endurance)
-war1.sleep()
-print(war1.endurance)
+
