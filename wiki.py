@@ -42,16 +42,18 @@ def link_go():
             if href:  # Проверка, что ссылка не пустая
                 hatnotes.append(href)
 
-    if hatnotes:
+    if hatnotes: # Если список ссылок не пустой, то случайный выбор ссылки и переход по ней
         link = random.choice(hatnotes)
         browser.get(link)
     else:
         print("Ссылок на странице не найдено")
 
 
-def search_wikipedia(query):
+def search_wikipedia(query): # стартовый запрос
+    # Найти поле поиска
     search_box = browser.find_element(By.ID, "searchInput")
     search_box.clear()  # Очистить поле поиска
+    # Ввести в поиск запрос пользователя
     search_box.send_keys(query)
     search_box.send_keys(Keys.RETURN)
 
