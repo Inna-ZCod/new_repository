@@ -161,4 +161,4 @@ cython_debug/
 
 # Пользовательские файлы и папки
 divanpars
-
+prices.csv
