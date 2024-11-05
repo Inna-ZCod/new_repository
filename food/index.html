@@ -1,67 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Любимая еда</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Настройка меню -->
+    <style>
+        .navbar-nav .nav-link {
+            margin-right: 90px;
+        }
+
+        .navbar-nav .nav-link:last-child {
+            margin-right: 0;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1 align="center">Моя любимая еда</h1>
+     <!-- Шапка сайта -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
 
-    <table bgcolor="#4CEF8A" align="center" border="2px" cellpadding="2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <tr>
-            <th>Название</th>
-            <th>Мой рейтинг</th>
-            <th>Ссылка на рецепт</th>
-            <th>Фото</th>
-        </tr>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                            <a class="nav-link" href="#s_1"><strong>Карусель</strong></a>
+                            <a class="nav-link" href="#s_2"><strong>Карточки</strong></a>
+                            <a class="nav-link" href="#s_3"><strong>Аккордеон</strong></a>
+                      </div>
+                </div>
+          </div>
+    </nav>
 
-        <tr>
-            <td align="center">Запеканка из макарон с курицей и помидорами</td>
-            <td align="center">10</td>
-            <td align="center">
-                <a href="https://www.russianfood.com/recipes/recipe.php?rid=164496" target="_blank">Рецепт запеканки</a>
-            </td>
-            <td align="center">
-                <img src="Zapekanka.jpg" alt="Запеканка" title="Запеканка из макарон с курицей и помидорами">
-            </td>
-        </tr>
+      <!-- Основной контент -->
+    <div class="container mt-5">
+        <!-- Первая секция: Слайдер -->
+        <section id="s_1" class="mb-5">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
 
-        <tr>
-            <td align="center">Картошка, тушенная с курицей <br>в сметанно-сливочном соусе</td>
-            <td align="center">8</td>
-            <td align="center">
-                <a href="https://www.russianfood.com/recipes/recipe.php?rid=160316" target="_blank">Рецепт картошки</a>
-            </td>
-            <td align="center">
-                <img src="Bulba.jpg" alt="Картошка тушеная" title="Картошка, тушенная с курицей в сметанно-сливочном соусе">
-            </td>
-        </tr>
+                      <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Bulba.jpg" class="d-block w-100" alt="Картошка, тушенная с курицей в сметанно-сливочном соусе">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Hadgehog.jpg" class="d-block w-100" alt="Салат 'Ёжик'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Soop.jpg" class="d-block w-100" alt="Сырный суп с копчеными колбасками">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Zapekanka.jpg" class="d-block w-100" alt="Запеканка из макарон с курицей и помидорами">
+                            </div>
+                      </div>
 
-        <tr>
-            <td align="center">Сырный суп с копчеными колбасками</td>
-            <td align="center">10</td>
-            <td align="center">
-                <a href="https://www.russianfood.com/recipes/recipe.php?rid=134876" target="_blank">Рецепт сырного супа</a>
-            </td>
-            <td align="center">
-                <img src="Soop.jpg" alt="Сырный суп" title="Сырный суп с копчеными колбасками">
-            </td>
-        </tr>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Предыдущий</span>
+                      </button>
 
-        <tr>
-            <td align="center">Салат "Ёжик"</td>
-            <td align="center">9</td>
-            <td align="center">
-                <a href="https://www.russianfood.com/recipes/recipe.php?rid=121720" target="_blank">Рецепт салата</a>
-            </td>
-            <td align="center">
-                <img src="Hadgehog.jpg" alt="Салат" title="Салат 'Ёжик'">
-            </td>
-        </tr>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Следующий</span>
+                      </button>
 
-    </table>
+            </div>
+        </section>
 
+        <!-- Вторая секция: Карточки -->
+        <section id="s_2" class="mb-5">
+            <div class="row">
+                <!-- Карточка 1 -->
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card" style="width: 18rem;">
+                              <img src="Zapekanka.jpg" class="card-img-top" alt="Запеканка из макарон с курицей и помидорами">
+                              <div class="card-body">
+                                    <h5 class="card-title">Запеканка из макарон с курицей и помидорами</h5>
+                                    <p class="card-text">Из доступных и недорогих продуктов можно приготовить вкусное горячее блюдо, которое понравится всем членам семьи. Этот простой рецепт запеканки из макарон, куриного филе и помидоров сэкономит время любой хозяйке, ведь обед приготовит духовка. А вам остаётся только подготовить продукты и сервировать стол.)</p>
+                                    <a href="https://www.russianfood.com/recipes/recipe.php?rid=164496" target="_blank" class="btn btn-primary">Рецепт</a>
+                              </div>
+                        </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card" style="width: 18rem;">
+                          <img src="Bulba.jpg" class="card-img-top" alt="Картошка, тушенная с курицей в сметанно-сливочном соусе">
+                          <div class="card-body">
+                                <h5 class="card-title">Картошка, тушенная с курицей в сметанно-сливочном соусе</h5>
+                                <p class="card-text">Куриное филе и картофель в соусе из сметаны и сливок покорят с первого кусочка!) Курица и картошка в нежном соусе с добавлением тимьяна приобретают изумительный аромат, замечательный вкус и сочность. А ещё это блюдо готовится достаточно просто и в одной кастрюле, что очень удобно.</p>
+                                <a href="https://www.russianfood.com/recipes/recipe.php?rid=160316" target="_blank" class="btn btn-primary">Рецепт</a>
+                          </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card" style="width: 18rem;">
+                          <img src="Soop.jpg" class="card-img-top" alt="Сырный суп с копчеными колбасками">
+                          <div class="card-body">
+                                <h5 class="card-title">Сырный суп с копчеными колбасками</h5>
+                                <p class="card-text">Очень сытный и вкусный сырный суп с плавленым сыром. Готовится просто и довольно быстро. Добавьте в суп немного копченых колбасок или сосисок, так будет вкуснее и ароматней. Приятного аппетита!</p>
+                                <a href="https://www.russianfood.com/recipes/recipe.php?rid=134876" target="_blank" class="btn btn-primary">Рецепт</a>
+                          </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card" style="width: 18rem;">
+                          <img src="Hadgehog.jpg" class="card-img-top" alt="Салат 'Ёжик'">
+                          <div class="card-body">
+                                <h5 class="card-title">Салат "Ёжик"</h5>
+                                <p class="card-text">Этот сытный салат с колбасой, сыром и кукурузой подойдёт к любому празднику.</p>
+                                <a href="https://www.russianfood.com/recipes/recipe.php?rid=121720" target="_blank" class="btn btn-primary">Рецепт</a>
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Третья секция: Аккордеон -->
+        <section id="s_3">
+            <div class="accordion" id="accordionExample">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <strong>Запеканка из макарон с курицей и помидорами</strong>
+                          </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+
+                                Из доступных и недорогих продуктов можно приготовить вкусное горячее блюдо, которое понравится всем членам семьи.
+                                Этот простой рецепт запеканки из макарон, куриного филе и помидоров сэкономит время любой хозяйке, ведь обед приготовит духовка.
+                                А вам остаётся только подготовить продукты и сервировать стол.) <br>
+
+                                <a href="https://www.russianfood.com/recipes/recipe.php?rid=164496" target="_blank">Посмотреть рецепт</a>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong>Картошка, тушенная с курицей в сметанно-сливочном соусе</strong>
+                          </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+
+                                Куриное филе и картофель в соусе из сметаны и сливок покорят с первого кусочка!)
+                                Курица и картошка в нежном соусе с добавлением тимьяна приобретают изумительный аромат, замечательный вкус и сочность.
+                                А ещё это блюдо готовится достаточно просто и в одной кастрюле, что очень удобно. <br>
+
+                                <a href="https://www.russianfood.com/recipes/recipe.php?rid=160316" target="_blank">Посмотреть рецепт</a>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>Сырный суп с копчеными колбасками</strong>
+                          </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                                Очень сытный и вкусный сырный суп с плавленым сыром. Готовится просто и довольно быстро.
+                                Добавьте в суп немного копченых колбасок или сосисок, так будет вкуснее и ароматней. Приятного аппетита!<br>
+
+                                <a href="https://www.russianfood.com/recipes/recipe.php?rid=134876" target="_blank">Посмотреть рецепт</a>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <strong>Салат "Ёжик"</strong>
+                          </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                                Этот сытный салат с колбасой, сыром и кукурузой подойдёт к любому празднику. <br>
+
+                               <a href="https://www.russianfood.com/recipes/recipe.php?rid=121720" target="_blank">Посмотреть рецепт</a>
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Футер -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Контактная информация</h5>
+                    <p>
+                        Все фотографии и описания рецептов взяты с сайта www.russianfood.com
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Социальные сети</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="https://t.me/https://t.me/innakouch" target="_blank">Связаться в Telegram</a>
+                        </li>
+                        <li>
+                            <a href="mailto:ink.blg.am@gmail.com">Отправить письмо</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
